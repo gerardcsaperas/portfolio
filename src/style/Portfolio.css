@@ -1,0 +1,12 @@
+#Portfolio {
+    background: green;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+}
+
+div.card-columns {
+    position: absolute;
+    top: 50px;
+}
