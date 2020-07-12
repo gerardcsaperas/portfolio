@@ -61,7 +61,6 @@
                 letter-spacing: 1px;
                 display: inline-block;
                 text-decoration: none;
-                font-family: 'Open Sans';
                 content: 'Hire me';
                 z-index: 3;
                 text-transform: uppercase;
@@ -117,7 +116,6 @@
                 letter-spacing: 1px;
                 display: inline-block;
                 text-decoration: none;
-                font-family: 'Open Sans';
                 text-transform: uppercase;
             }
             #hire:hover:after {
@@ -160,7 +158,7 @@
             #icons {
                 position: absolute;
                 margin: 0;
-                bottom: 50px;
+                top: 92.5vh;
                 width: 100%;
             }
             #row1-icons,

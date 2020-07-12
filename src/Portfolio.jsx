@@ -79,7 +79,7 @@ export class Portfolio extends React.Component {
 							}
 							onClick={this.setHtml}
 						>
-							HTML
+							<b>HTML</b>
 						</button>
 						<button
 							className="skill-tag"
@@ -92,7 +92,7 @@ export class Portfolio extends React.Component {
 							}
 							onClick={this.setCss}
 						>
-							CSS
+							<b>CSS</b>
 						</button>
 						<button
 							className="skill-tag"
@@ -105,7 +105,7 @@ export class Portfolio extends React.Component {
 							}
 							onClick={this.setJavascript}
 						>
-							JavaScript
+							<b>JavaScript</b>
 						</button>
 						<button
 							className="skill-tag"
@@ -118,7 +118,7 @@ export class Portfolio extends React.Component {
 							}
 							onClick={this.setReactjs}
 						>
-							React.js
+							<b>React.js</b>
 						</button>
 						<button
 							className="skill-tag"
@@ -131,7 +131,7 @@ export class Portfolio extends React.Component {
 							}
 							onClick={this.setBootstrap}
 						>
-							Bootstrap
+							<b>Bootstrap</b>
 						</button>
 						<button
 							className="skill-tag"
@@ -144,7 +144,7 @@ export class Portfolio extends React.Component {
 							}
 							onClick={this.setNodejs}
 						>
-							Node.js
+							<b>Node.js</b>
 						</button>
 						<button
 							className="skill-tag"
@@ -157,7 +157,7 @@ export class Portfolio extends React.Component {
 							}
 							onClick={this.setMongodb}
 						>
-							Mongodb
+							<b>Mongodb</b>
 						</button>
 					</div>
 					<CardColumns>

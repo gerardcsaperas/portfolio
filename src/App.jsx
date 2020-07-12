@@ -5,19 +5,31 @@ import NavigationBar from './NavigationBar';
 import Home from './Home';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
+import Icons from './Icons';
 
 class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			page: 'Home',
-			typingAnimation: 'on'
+			typingAnimation: 'on',
+			navbarVisible: false
 		};
 	}
+	setNavbarVisible = () => {
+		this.setState({
+			navbarVisible: true
+		});
+	};
 	setTypingOff = () => {
 		// If the user already saw the animation once, deactivate it
 		this.setState({
 			typingAnimation: 'off'
+		});
+	};
+	toContact = () => {
+		this.setState({
+			page: 'Contact'
 		});
 	};
 	toHome = () => {
@@ -33,13 +45,19 @@ class App extends React.Component {
 	render() {
 		return (
 			<Container id="App" fluid>
-				<NavigationBar toPortfolio={this.toPortfolio} toHome={this.toHome} />
+				{this.state.navbarVisible ? (
+					<NavigationBar toPortfolio={this.toPortfolio} toHome={this.toHome} toContact={this.toContact} />
+				) : null}
 				<Portfolio page={this.state.page} />
 				<Home
 					typingAnimation={this.state.typingAnimation}
 					setTypingOff={this.setTypingOff}
+					setNavbarVisible={this.setNavbarVisible}
 					page={this.state.page}
+					toContact={this.toContact}
 				/>
+				<Contact page={this.state.page} />
+				<Icons />
 			</Container>
 		);
 	}
