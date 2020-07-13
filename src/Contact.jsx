@@ -86,7 +86,7 @@ export default class Contact extends Component {
 									required
 								/>
 							</Form.Group>
-							<button id="contact-submit" onClick={this.sendEmail}>
+							<button id="contact-submit" type="submit" onClick={this.sendEmail}>
 								<b>SUBMIT</b>
 							</button>
 						</Form>
