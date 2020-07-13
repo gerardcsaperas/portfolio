@@ -45,11 +45,11 @@ app.post('/send-email', (req, res) => {
         }
     });
 
-    transporter.sendMail(mailForCustomer, (error, info) => {
+    transporter.sendMail(mailForCustomer, (error, data) => {
         if (error) {
             console.log(error);
         } else {
-            console.log('Email sent: ' + info.response);
+            res.send(data);
         }
     });
 });

@@ -36,7 +36,7 @@ function Home(props) {
 						</div>
 						{props.typingAnimation === 'on' ? null : (
 							<Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
-								{(style) => <a style={style} href="" id="hire" onClick={props.toContact} />}
+								{(style) => <a style={style} id="hire" onClick={props.toContact} />}
 							</Spring>
 						)}
 					</div>
