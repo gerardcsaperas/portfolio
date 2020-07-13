@@ -40,8 +40,6 @@ app.post('/send-email', (req, res) => {
     transporter.sendMail(mailForMe, (error, info) => {
         if (error) {
             console.log(error);
-        } else {
-            console.log('Email sent: ' + info.response);
         }
     });
 

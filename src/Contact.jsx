@@ -56,7 +56,7 @@ export default class Contact extends Component {
 				comments: this.state.comments
 			})
 		}).then((res) => {
-			if (res.status === '200') {
+			if (res.status === 200) {
 				this.setState({
 					showSuccess: true
 				});
@@ -110,10 +110,12 @@ export default class Contact extends Component {
 								<Spinner id="contact-spinner" animation="border" variant="warning" />
 							)}
 							{this.state.showSuccess ? (
-								<p>Your message has been sent. Please check your inbox for confirmation.</p>
+								<p id="success">
+									Your message has been sent. Please check your inbox for confirmation.
+								</p>
 							) : null}
 							{this.state.showFailure ? (
-								<p>
+								<p id="failure">
 									There has been an error. Please, try again or send me a message directly at
 									gcsaperas@gmail.com...
 								</p>

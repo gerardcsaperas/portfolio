@@ -64,3 +64,9 @@ small.form-text.text-muted {
 #contact-submit:active {
     background: #ffe96d;
 }
+
+#success,
+#failure {
+    padding: 1.5rem;
+    align-self: center;
+}
