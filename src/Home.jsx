@@ -27,7 +27,7 @@ function Home(props) {
 			<Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
 				{(style) => (
 					<div style={style} id="Home">
-						<div id="text" className="d-flex flex-column align-items-start">
+						<div id="text" className="d-flex flex-column">
 							<p className="display-3">Hi,</p>
 							<p className="display-1">it's Gerard</p>
 							<p id="webdev-text" className="display-3">

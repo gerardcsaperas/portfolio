@@ -1,6 +1,7 @@
 import React from 'react';
 import './style/App.css';
 import { Container } from 'react-bootstrap';
+import BackgroundImage from './BackgroundImage';
 import NavigationBar from './NavigationBar';
 import Home from './Home';
 import Portfolio from './Portfolio';
@@ -45,6 +46,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<Container id="App" fluid>
+				<BackgroundImage />
 				{this.state.navbarVisible ? (
 					<NavigationBar toPortfolio={this.toPortfolio} toHome={this.toHome} toContact={this.toContact} />
 				) : null}
@@ -57,7 +59,7 @@ class App extends React.Component {
 					toContact={this.toContact}
 				/>
 				<Contact page={this.state.page} />
-				<Icons />
+				{this.state.page === 'Home' || this.state.page === 'Contact' ? <Icons /> : null}
 			</Container>
 		);
 	}

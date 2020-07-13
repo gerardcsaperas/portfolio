@@ -1,4 +1,5 @@
 import React from 'react';
+import './style/Icons.css';
 import { Row, Col } from 'react-bootstrap';
 
 function Icons() {

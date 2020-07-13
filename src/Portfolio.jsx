@@ -69,101 +69,31 @@ export class Portfolio extends React.Component {
 			return (
 				<Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
 					{(style) => (
-						<div style={style} id="Portfolio">
+						<div id="Portfolio-div" style={style}>
 							<div id="labels">
-								<button
-									className="skill-tag"
-									style={
-										this.state.html ? (
-											{ backroundColor: 'white' }
-										) : (
-											{ backgroundColor: 'rgba(255,255,255,0.7)' }
-										)
-									}
-									onClick={this.setHtml}
-								>
-									<b>HTML</b>
+								<button className="skill-tag" onClick={this.setHtml}>
+									{this.state.html ? <b>✔️ HTML</b> : <b>❌ HTML</b>}
 								</button>
-								<button
-									className="skill-tag"
-									style={
-										this.state.css ? (
-											{ backroundColor: 'white' }
-										) : (
-											{ backgroundColor: 'rgba(255,255,255,0.7)' }
-										)
-									}
-									onClick={this.setCss}
-								>
-									<b>CSS</b>
+								<button className="skill-tag" onClick={this.setCss}>
+									{this.state.css ? <b>✔️ CSS</b> : <b>❌ CSS</b>}
 								</button>
-								<button
-									className="skill-tag"
-									style={
-										this.state.javascript ? (
-											{ backroundColor: 'white' }
-										) : (
-											{ backgroundColor: 'rgba(255,255,255,0.7)' }
-										)
-									}
-									onClick={this.setJavascript}
-								>
-									<b>JavaScript</b>
+								<button className="skill-tag" onClick={this.setJavascript}>
+									{this.state.javascript ? <b>✔️ JavaScript</b> : <b>❌ JavaScript</b>}
 								</button>
-								<button
-									className="skill-tag"
-									style={
-										this.state.reactjs ? (
-											{ backroundColor: 'white' }
-										) : (
-											{ backgroundColor: 'rgba(255,255,255,0.7)' }
-										)
-									}
-									onClick={this.setReactjs}
-								>
-									<b>React.js</b>
+								<button className="skill-tag" onClick={this.setReactjs}>
+									{this.state.reactjs ? <b>✔️ React.js</b> : <b>❌ React.js</b>}
 								</button>
-								<button
-									className="skill-tag"
-									style={
-										this.state.bootstrap ? (
-											{ backroundColor: 'white' }
-										) : (
-											{ backgroundColor: 'rgba(255,255,255,0.7)' }
-										)
-									}
-									onClick={this.setBootstrap}
-								>
-									<b>Bootstrap</b>
+								<button className="skill-tag" onClick={this.setBootstrap}>
+									{this.state.bootstrap ? <b>✔️ Bootstrap</b> : <b>❌ Bootstrap</b>}
 								</button>
-								<button
-									className="skill-tag"
-									style={
-										this.state.nodejs ? (
-											{ backroundColor: 'white' }
-										) : (
-											{ backgroundColor: 'rgba(255,255,255,0.7)' }
-										)
-									}
-									onClick={this.setNodejs}
-								>
-									<b>Node.js</b>
+								<button className="skill-tag" onClick={this.setNodejs}>
+									{this.state.nodejs ? <b>✔️ Node.js</b> : <b>❌ Node.js</b>}
 								</button>
-								<button
-									className="skill-tag"
-									style={
-										this.state.mongodb ? (
-											{ backroundColor: 'white' }
-										) : (
-											{ backgroundColor: 'rgba(255,255,255,0.7)' }
-										)
-									}
-									onClick={this.setMongodb}
-								>
-									<b>Mongodb</b>
+								<button className="skill-tag" onClick={this.setMongodb}>
+									{this.state.mongodb ? <b>✔️ Mongodb</b> : <b>❌ Mongodb</b>}
 								</button>
 							</div>
-							<CardColumns>
+							<CardColumns id="Portfolio">
 								{/* drum machine */}
 								{this.state.reactjs || this.state.bootstrap ? (
 									<Card>
@@ -173,11 +103,7 @@ export class Portfolio extends React.Component {
 										/>
 										<Card.Body>
 											<Card.Title>
-												<a href="">
-													<a href="https://codepen.io/gerardcsaperas/pen/mdeGNJO">
-														Drum Machine
-													</a>
-												</a>
+												<a href="https://codepen.io/gerardcsaperas/pen/mdeGNJO">Drum Machine</a>
 											</Card.Title>
 											<Card.Text>
 												Fully functional drum machine. Play using Q W E A S D Z X C keys or

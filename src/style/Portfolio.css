@@ -1,22 +1,22 @@
 #Portfolio {
+    padding: 0;
+    margin: 0;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.4);
-    top: 50px;
-    left: 50vw;
-    margin-left: -47.5vw;
-    height: 85vh;
-    width: 95vw;
-    overflow-y: scroll;
+    top: 100px;
+    width: 100%;
+    height: auto;
 }
 
 #labels {
     margin: 0;
     padding: 0;
     display: flex;
-    width: 95vw;
+    width: 100vw;
     height: 50px;
     justify-content: center;
     position: fixed;
+    top: 50px;
     z-index: 2;
 }
 
@@ -41,12 +41,6 @@ button:focus {
     outline: 0;
 }
 
-div.card-columns {
-    position: absolute;
-    top: 60px;
-    height: auto;
-}
-
 p.card-text {
     color: gray;
     text-align: center;
@@ -58,4 +52,19 @@ div.card-title {
 
 div.card-footer {
     text-align: center
+}
+
+@media only screen and (max-width: 815px) {
+    #Portfolio {
+        top: 140px;
+        overflow-y: scroll;
+    }
+    #labels {
+        overflow: scroll;
+        display: block;
+        height: 100px;
+    }
+    .skill-tag {
+        height: 40px;
+    }
 }

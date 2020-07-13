@@ -1,0 +1,32 @@
+.icon-col {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+}
+
+@media only screen and (max-width: 699px) {
+    #icons {
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #icons {
+        position: absolute;
+        margin: 0;
+        top: 92.5vh;
+        width: 100%;
+    }
+    #row1-icons,
+    #row2-icons {
+        width: 50%;
+    }
+}
