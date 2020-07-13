@@ -106,9 +106,9 @@ export default class Contact extends Component {
 								<button id="contact-submit" type="submit" onClick={this.sendEmail}>
 									<b>SUBMIT</b>
 								</button>
-							) : (
+							) : !this.state.showSuccess && !this.state.showFailure ? (
 								<Spinner id="contact-spinner" animation="border" variant="warning" />
-							)}
+							) : null}
 							{this.state.showSuccess ? (
 								<p id="success">
 									Your message has been sent. Please check your inbox for confirmation.
