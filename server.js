@@ -7,6 +7,7 @@ const app = express();
 // eMail
 const nodemailer = require('nodemailer');
 
+app.use(express.static(path.join(__dirname, 'build')));
 app.use(express.json());
 
 // eMail test
@@ -54,6 +55,10 @@ app.post('/send-email', (req, res) => {
             console.log('Email sent: ' + info.response);
         }
     });
+});
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 const PORT = process.env.PORT || 8080;
