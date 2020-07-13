@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style/Contact.css';
-import { Form } from 'react-bootstrap';
+import { Form, Spinner } from 'react-bootstrap';
 import { Spring } from 'react-spring/renderprops';
 
 export default class Contact extends Component {
@@ -39,6 +39,10 @@ export default class Contact extends Component {
 		console.log(e);
 	};
 	sendEmail = () => {
+		this.setState({
+			clickedSend: true
+		});
+
 		fetch('/send-email', {
 			method: 'POST',
 			headers: {
