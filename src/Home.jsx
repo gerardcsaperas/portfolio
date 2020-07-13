@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './style/Home.css';
-import { Row, Col } from 'react-bootstrap';
+import { Spring } from 'react-spring/renderprops';
 
 function Home(props) {
 	useEffect(() => {
@@ -24,16 +24,24 @@ function Home(props) {
 	});
 	if (props.page === 'Home') {
 		return (
-			<div id="Home">
-				<div id="text" className="d-flex flex-column align-items-start">
-					<p className="display-3">Hi,</p>
-					<p className="display-1">it's Gerard</p>
-					<p id="webdev-text" className="display-3">
-						{props.typingAnimation === 'on' ? '' : 'a web developer'}
-					</p>
-				</div>
-				<a href="#" id="hire" onClick={props.toContact} />
-			</div>
+			<Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
+				{(style) => (
+					<div style={style} id="Home">
+						<div id="text" className="d-flex flex-column align-items-start">
+							<p className="display-3">Hi,</p>
+							<p className="display-1">it's Gerard</p>
+							<p id="webdev-text" className="display-3">
+								{props.typingAnimation === 'on' ? '' : 'a web developer'}
+							</p>
+						</div>
+						{props.typingAnimation === 'on' ? null : (
+							<Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
+								{(style) => <a style={style} href="#" id="hire" onClick={props.toContact} />}
+							</Spring>
+						)}
+					</div>
+				)}
+			</Spring>
 		);
 	} else {
 		return null;
