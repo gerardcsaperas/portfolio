@@ -40,7 +40,6 @@ export default class Contact extends Component {
 	sendEmail = () => {
 		fetch('/send-email', {
 			method: 'POST',
-			mode: 'no-cors',
 			headers: {
 				'Content-Type': 'application/json'
 			},
