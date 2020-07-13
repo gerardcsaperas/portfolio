@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './style/Home.css';
 import { Spring } from 'react-spring/renderprops';
+import Icons from './Icons';
 
 function Home(props) {
 	useEffect(() => {
@@ -39,6 +40,7 @@ function Home(props) {
 								{(style) => <a style={style} id="hire" onClick={props.toContact} />}
 							</Spring>
 						)}
+						<Icons />
 					</div>
 				)}
 			</Spring>

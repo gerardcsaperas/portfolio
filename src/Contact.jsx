@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './style/Contact.css';
 import { Form, Spinner } from 'react-bootstrap';
 import { Spring } from 'react-spring/renderprops';
+import Icons from './Icons';
 
 export default class Contact extends Component {
 	constructor(props) {
@@ -128,6 +129,7 @@ export default class Contact extends Component {
 									</p>
 								) : null}
 							</Form>
+							{this.props.windowHeight > 568 ? <Icons id="contact-icons" /> : null}
 						</div>
 					)}
 				</Spring>

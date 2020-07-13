@@ -6,7 +6,6 @@ import NavigationBar from './NavigationBar';
 import Home from './Home';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
-import Icons from './Icons';
 
 class App extends React.Component {
 	constructor(props) {
@@ -14,7 +13,8 @@ class App extends React.Component {
 		this.state = {
 			page: 'Home',
 			typingAnimation: 'on',
-			navbarVisible: false
+			navbarVisible: false,
+			windowHeight: window.innerHeight
 		};
 	}
 	setNavbarVisible = () => {
@@ -58,8 +58,7 @@ class App extends React.Component {
 					page={this.state.page}
 					toContact={this.toContact}
 				/>
-				<Contact page={this.state.page} />
-				{this.state.page === 'Home' || this.state.page === 'Contact' ? <Icons /> : null}
+				<Contact page={this.state.page} windowHeight={this.state.windowHeight} />
 			</Container>
 		);
 	}

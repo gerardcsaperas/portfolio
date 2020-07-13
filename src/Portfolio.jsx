@@ -71,6 +71,9 @@ export class Portfolio extends React.Component {
 					{(style) => (
 						<div id="Portfolio-div" style={style}>
 							<div id="labels">
+								<p id="skills-scroll">
+									Scroll &<br />Select
+								</p>
 								<button className="skill-tag" onClick={this.setHtml}>
 									{this.state.html ? <b>✔️ HTML</b> : <b>❌ HTML</b>}
 								</button>
