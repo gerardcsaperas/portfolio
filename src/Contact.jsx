@@ -10,7 +10,9 @@ export default class Contact extends Component {
 			name: '',
 			email: '',
 			comments: '',
-			clickedSend: false
+			clickedSend: false,
+			showSuccess: false,
+			showFailure: false
 		};
 	}
 	handleCommentsChange = (e) => {
@@ -53,7 +55,17 @@ export default class Contact extends Component {
 				email: this.state.email,
 				comments: this.state.comments
 			})
-		}).then((res) => console.log(res));
+		}).then((res) => {
+			if (res.status === '200') {
+				this.setState({
+					showSuccess: true
+				});
+			} else {
+				this.setState({
+					showFailure: true
+				});
+			}
+		});
 	};
 	render() {
 		if (this.props.page === 'Contact') {
@@ -97,6 +109,15 @@ export default class Contact extends Component {
 							) : (
 								<Spinner id="contact-spinner" animation="border" variant="warning" />
 							)}
+							{this.state.showSuccess ? (
+								<p>Your message has been sent. Please check your inbox for confirmation.</p>
+							) : null}
+							{this.state.showFailure ? (
+								<p>
+									There has been an error. Please, try again or send me a message directly at
+									gcsaperas@gmail.com...
+								</p>
+							) : null}
 						</Form>
 					)}
 				</Spring>
