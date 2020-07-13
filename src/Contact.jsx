@@ -44,11 +44,11 @@ export default class Contact extends Component {
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: {
-				name: 'Gerard',
+			body: JSON.stringify({
+				name: this.state.name,
 				email: this.state.email,
 				comments: this.state.comments
-			}
+			})
 		});
 	};
 	render() {

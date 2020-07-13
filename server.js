@@ -14,9 +14,6 @@ app.use(express.json());
 app.post('/send-email', (req, res) => {
     const { name, email, comments } = req.body;
 
-    console.log(req.body);
-    console.log(name);
-
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
