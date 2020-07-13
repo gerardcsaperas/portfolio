@@ -24,6 +24,7 @@
     border: 0;
     width: 100%;
     color: #504F54;
+    background-color: whitesmoke;
 }
 
 .skill-tag:hover {
@@ -57,10 +58,9 @@ div.card-footer {
 @media only screen and (max-width: 815px) {
     #Portfolio {
         top: 140px;
-        overflow-y: scroll;
     }
     #labels {
-        overflow: scroll;
+        overflow-y: scroll;
         display: block;
         height: 100px;
     }

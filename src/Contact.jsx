@@ -41,31 +41,40 @@ export default class Contact extends Component {
 		console.log(e);
 	};
 	sendEmail = () => {
-		this.setState({
-			clickedSend: true
-		});
+		if (
+			this.state.name !== '' &&
+			this.state.email.includes('@') &&
+			this.state.email.includes('.') &&
+			this.state.comments !== ''
+		) {
+			this.setState({
+				clickedSend: true
+			});
 
-		fetch('/send-email', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({
-				name: this.state.name,
-				email: this.state.email,
-				comments: this.state.comments
-			})
-		}).then((res) => {
-			if (res.status === 200) {
-				this.setState({
-					showSuccess: true
-				});
-			} else {
-				this.setState({
-					showFailure: true
-				});
-			}
-		});
+			fetch('/send-email', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					name: this.state.name,
+					email: this.state.email,
+					comments: this.state.comments
+				})
+			}).then((res) => {
+				if (res.status === 200) {
+					this.setState({
+						showSuccess: true
+					});
+				} else {
+					this.setState({
+						showFailure: true
+					});
+				}
+			});
+		} else {
+			return alert('Hey, you should really double-check all fields are filled correctly. :-)');
+		}
 	};
 	render() {
 		if (this.props.page === 'Contact') {
@@ -80,7 +89,6 @@ export default class Contact extends Component {
 										type="text"
 										placeholder="Your Name"
 										onChange={this.handleNameChange}
-										required
 									/>
 								</Form.Group>
 								<Form.Group controlId="email">
@@ -89,7 +97,6 @@ export default class Contact extends Component {
 										type="email"
 										placeholder="name@example.com"
 										onChange={this.handleEmailChange}
-										required
 									/>
 									<Form.Text muted>I won't share it with anyone else.</Form.Text>
 								</Form.Group>
@@ -100,7 +107,6 @@ export default class Contact extends Component {
 										rows="3"
 										placeholder="Write as much as you need about yourself, your company, your project..."
 										onChange={this.handleCommentsChange}
-										required
 									/>
 								</Form.Group>
 								{!this.state.clickedSend ? (
