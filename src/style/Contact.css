@@ -57,6 +57,10 @@ small.form-text.text-muted {
     letter-spacing: 1px;
 }
 
+#contact-spinner {
+    align-self: center;
+}
+
 #contact-submit:active {
     background: #ffe96d;
 }

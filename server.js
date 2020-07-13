@@ -27,7 +27,7 @@ app.post('/send-email', (req, res) => {
         from: 'gcsaperas@gmail.com',
         to: 'gcsaperas@gmail.com',
         subject: 'Web Dev - New Message',
-        html: `<p>Hola a mi mateix,<br><br>Tinc un nou missatge.<br><br><b>De: ${name}</b><br><br><b>email:</b> ${email}<br><br><b>Missatge:</b> ${comments}<br><br>Rebut a través de www.gerardcsaperas.com`
+        html: `<p>Hola a mi mateix,<br><br>Tinc un nou missatge.<br><br><b>De:</b> ${name}<br><br><b>email:</b> ${email}<br><br><b>Missatge:</b> ${comments}<br><br>Rebut a través de www.gerardcsaperas.com`
     };
 
     const mailForCustomer = {

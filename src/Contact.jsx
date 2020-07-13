@@ -9,7 +9,8 @@ export default class Contact extends Component {
 		this.state = {
 			name: '',
 			email: '',
-			comments: ''
+			comments: '',
+			clickedSend: false
 		};
 	}
 	handleCommentsChange = (e) => {
@@ -48,7 +49,7 @@ export default class Contact extends Component {
 				email: this.state.email,
 				comments: this.state.comments
 			})
-		});
+		}).then((res) => console.log(res));
 	};
 	render() {
 		if (this.props.page === 'Contact') {
@@ -85,9 +86,13 @@ export default class Contact extends Component {
 									required
 								/>
 							</Form.Group>
-							<button id="contact-submit" type="submit" onClick={this.sendEmail}>
-								<b>SUBMIT</b>
-							</button>
+							{!this.state.clickedSend ? (
+								<button id="contact-submit" type="submit" onClick={this.sendEmail}>
+									<b>SUBMIT</b>
+								</button>
+							) : (
+								<Spinner id="contact-spinner" animation="border" variant="warning" />
+							)}
 						</Form>
 					)}
 				</Spring>
