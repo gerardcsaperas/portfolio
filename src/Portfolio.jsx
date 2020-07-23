@@ -159,23 +159,6 @@ export class Portfolio extends React.Component {
 										</Card.Footer>
 									</Card>
 								) : null}
-								{/* css tibbers */}
-								{this.state.css ? (
-									<Card>
-										<Card.Img variant="top" src={require('./assets/images/css-tibbers.jpeg')} />
-										<Card.Body>
-											<Card.Title>
-												<a href="https://codepen.io/gerardcsaperas/pen/JjYrzMm">Tibbers</a>
-											</Card.Title>
-											<Card.Text>
-												Funny Tibbers illustration with animated background using SCSS only.
-											</Card.Text>
-										</Card.Body>
-										<Card.Footer>
-											<small className="text-muted">SCSS</small>
-										</Card.Footer>
-									</Card>
-								) : null}
 								{/* heat map */}
 								{this.state.javascript ? (
 									<Card>
@@ -191,23 +174,6 @@ export class Portfolio extends React.Component {
 										</Card.Body>
 										<Card.Footer>
 											<small className="text-muted">JavaScript</small>
-										</Card.Footer>
-									</Card>
-								) : null}
-								{/* may4thlove */}
-								{this.state.css || this.state.javascript ? (
-									<Card>
-										<Card.Img variant="top" src={require('./assets/images/may4thlove.jpeg')} />
-										<Card.Body>
-											<Card.Title>
-												<a href="https://codepen.io/gerardcsaperas/pen/ExVbGvr">
-													May the 4th be with you
-												</a>
-											</Card.Title>
-											<Card.Text>Playing a bit with CSS and JavaScript animations.</Card.Text>
-										</Card.Body>
-										<Card.Footer>
-											<small className="text-muted">CSS + JavaScript</small>
 										</Card.Footer>
 									</Card>
 								) : null}
@@ -253,7 +219,7 @@ export class Portfolio extends React.Component {
 										</Card.Footer>
 									</Card>
 								) : null}
-								{/* Quote Machine */}
+								{/*API Quote Machine */}
 								{this.state.javascript || this.state.reactjs ? (
 									<Card>
 										<Card.Img
@@ -263,7 +229,7 @@ export class Portfolio extends React.Component {
 										<Card.Body>
 											<Card.Title>
 												<a href="https://codepen.io/gerardcsaperas/pen/LYprgqo">
-													Random Quote Generator
+													API Quote Generator
 												</a>
 											</Card.Title>
 											<Card.Text>
