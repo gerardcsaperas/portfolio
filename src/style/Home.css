@@ -1,152 +1,159 @@
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        
-        #Home {
-            height: 100vh;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-        }
-        
-        h1,
-        h2,
-        h3,
-        p {
-            color: whitesmoke;
-            padding: 0;
-            margin: 0;
-        }
-        
-        @media only screen and (max-width: 699px) {
-            h1,
-            p {
-                text-align: center;
-            }
-            #text {
-                position: absolute;
-                top: 15vh;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            .display-1 {
-                font-size: 4rem;
-                font-weight: 400;
-            }
-            .display-3 {
-                font-size: 3rem;
-                font-weight: 100;
-            }
-            #hire {
-                opacity: 1;
-                outline: 0;
-                color: #fff;
-                line-height: 40px;
-                position: absolute;
-                top: 60vh;
-                left: 50vw;
-                width: 150px;
-                margin-left: -75px;
-                text-align: center;
-                letter-spacing: 1px;
-                display: inline-block;
-                text-decoration: none;
-                content: 'Hire me';
-                z-index: 3;
-                text-transform: uppercase;
-            }
-            #hire:before {
-                top: 0;
-                left: 0;
-                opacity: 1;
-                color: #3b3b3b;
-                display: block;
-                padding: 0 30px;
-                line-height: 40px;
-                transition: 0.8s;
-                position: relative;
-                background: #ffdd1e;
-                content: "Hire me";
-                font-weight: bold;
-                transform: translateY(0) rotateX(0);
-            }
-            #hire:active {
-                background: black;
-            }
-        }
-        
-        @media only screen and (min-width: 700px) {
-            #text {
-                position: absolute;
-                top: 45vh;
-                left: 10vw;
-            }
-            .display-1 {
-                font-size: 7rem;
-                font-weight: 400;
-            }
-            .display-3 {
-                font-size: 5rem;
-                font-weight: 100;
-            }
-            #webdev-text {
-                margin-left: 10vw;
-            }
-            #hire {
-                opacity: 1;
-                outline: 0;
-                color: #fff;
-                line-height: 40px;
-                position: absolute;
-                top: 50vh;
-                left: 50vw;
-                width: 150px;
-                margin-left: -75px;
-                text-align: center;
-                letter-spacing: 1px;
-                display: inline-block;
-                text-decoration: none;
-                text-transform: uppercase;
-                cursor: pointer;
-            }
-            #hire:hover:after {
-                opacity: 1;
-                transform: translateY(0) rotateX(0);
-            }
-            #hire:hover:before {
-                opacity: 0;
-                transform: translateY(50%) rotateX(90deg);
-            }
-            #hire:after {
-                top: 0;
-                left: 0;
-                opacity: 0;
-                width: 100%;
-                color: #4c4c53;
-                display: block;
-                transition: 0.8s;
-                position: absolute;
-                background: #ffe96d;
-                content: "Let's talk";
-                font-weight: bold;
-                transform: translateY(-50%) rotateX(90deg);
-            }
-            #hire:before {
-                top: 0;
-                left: 0;
-                opacity: 1;
-                color: #3b3b3b;
-                display: block;
-                padding: 0 30px;
-                line-height: 40px;
-                transition: 0.8s;
-                position: relative;
-                background: #ffdd1e;
-                content: "Hire me";
-                font-weight: bold;
-                transform: translateY(0) rotateX(0);
-            }
-        }
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#Home {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+    color: whitesmoke;
+    padding: 0;
+    margin: 0;
+}
+
+@media only screen and (max-width: 699px) {
+    h1,
+    p {
+        text-align: center;
+    }
+    #text {
+        position: absolute;
+        top: 15vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .display-1 {
+        font-size: 4rem;
+        font-weight: 400;
+    }
+    .display-3 {
+        font-size: 3rem;
+        font-weight: 100;
+    }
+    #hire {
+        opacity: 1;
+        outline: 0;
+        color: #fff;
+        line-height: 40px;
+        position: absolute;
+        top: 60vh;
+        left: 50vw;
+        width: 150px;
+        margin-left: -75px;
+        text-align: center;
+        letter-spacing: 1px;
+        display: inline-block;
+        text-decoration: none;
+        content: 'Hire me';
+        z-index: 3;
+        text-transform: uppercase;
+    }
+    #hire:before {
+        top: 0;
+        left: 0;
+        opacity: 1;
+        color: #3b3b3b;
+        display: block;
+        padding: 0 30px;
+        line-height: 40px;
+        transition: 0.8s;
+        position: relative;
+        background: #ffdd1e;
+        content: "Hire me";
+        font-weight: bold;
+        transform: translateY(0) rotateX(0);
+    }
+    #hire:active {
+        background: black;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #text {
+        position: absolute;
+        top: 45vh;
+        left: 10vw;
+    }
+    .display-1 {
+        font-size: 7rem;
+        font-weight: 400;
+    }
+    .display-3 {
+        font-size: 5rem;
+        font-weight: 100;
+    }
+    #webdev-text {
+        margin-left: 10vw;
+    }
+    #hire {
+        opacity: 1;
+        outline: 0;
+        color: #fff;
+        line-height: 40px;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        width: 150px;
+        margin-left: -75px;
+        text-align: center;
+        letter-spacing: 1px;
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    #hire:hover:after {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+    #hire:hover:before {
+        opacity: 0;
+        transform: translateY(50%) rotateX(90deg);
+    }
+    #hire:after {
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        color: #4c4c53;
+        display: block;
+        transition: 0.8s;
+        position: absolute;
+        background: #ffe96d;
+        content: "Let's talk";
+        font-weight: bold;
+        transform: translateY(-50%) rotateX(90deg);
+    }
+    #hire:before {
+        top: 0;
+        left: 0;
+        opacity: 1;
+        color: #3b3b3b;
+        display: block;
+        padding: 0 30px;
+        line-height: 40px;
+        transition: 0.8s;
+        position: relative;
+        background: #ffdd1e;
+        content: "Hire me";
+        font-weight: bold;
+        transform: translateY(0) rotateX(0);
+    }
+    #linkedin i.fa {
+        font-size: 2rem;
+    }
+    #resume img {
+        height: 30px;
+        width: 30px;
+    }
+}

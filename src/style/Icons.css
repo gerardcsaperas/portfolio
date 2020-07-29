@@ -4,8 +4,8 @@
 }
 
 .icon {
-    width: 45px;
-    height: 45px;
+    max-width: 60px;
+    max-height: 45px;
 }
 
 @media only screen and (max-width: 699px) {

@@ -10,12 +10,14 @@ function Icons() {
 					<img className="icon" id="git" src={require('./assets/icons/icons8-git-96.png')} alt="git icon" />
 				</Col>
 				<Col className="icon-col">
-					<img
-						className="icon"
-						id="github"
-						src={require('./assets/icons/icons8-github-96.png')}
-						alt="github icon"
-					/>
+					<a href="#" target="_blank">
+						<img
+							className="icon"
+							id="github"
+							src={require('./assets/icons/icons8-github-96.png')}
+							alt="github icon"
+						/>
+					</a>
 				</Col>
 				<Col className="icon-col">
 					<img
@@ -39,15 +41,10 @@ function Icons() {
 			</Row>
 			<Row id="row2-icons" className="d-flex justify-content-around">
 				<Col className="icon-col">
-					<img className="icon" id="react" src={require('./assets/icons/reactjs.png')} alt="react.js icon" />
+					<img className="icon" id="php" src={require('./assets/icons/new-php-logo.png')} alt="php icon" />
 				</Col>
 				<Col className="icon-col">
-					<img
-						className="icon"
-						id="redux"
-						src={require('./assets/icons/icons8-redux-96.png')}
-						alt="redux icon"
-					/>
+					<img className="icon" id="react" src={require('./assets/icons/reactjs.png')} alt="react.js icon" />
 				</Col>
 				<Col className="icon-col">
 					<img className="icon" src={require('./assets/icons/icons8-mongodb-96.png')} alt="mongodb icon" />

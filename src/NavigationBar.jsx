@@ -12,6 +12,24 @@ function NavigationBar(props) {
 					<Navbar id="navbar" variant="custom" expand>
 						{/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
 						<Navbar.Collapse id="basic-navbar-nav"> */}
+						<Nav id="linkedin-and-resume-links">
+							<a
+								id="linkedin"
+								className="nav-link"
+								href="https://www.linkedin.com/in/gerardcastrelosaperas/"
+								target="_blank"
+							>
+								<i className="fa fa-linkedin-square" aria-hidden="true" />
+							</a>
+							<a
+								id="resume"
+								className="nav-link"
+								href="https://docs.google.com/document/d/1sXYBPUNgvFXUeRgK5i896jiE_jqV8AGOzcUX8rzyucI/edit?usp=sharing"
+								target="_blank"
+							>
+								<img src={require('./assets/icons/icons8-download-resume-80.png')} />
+							</a>
+						</Nav>
 						<Nav>
 							<Nav.Link className="nav-link" onClick={props.toHome}>
 								Home

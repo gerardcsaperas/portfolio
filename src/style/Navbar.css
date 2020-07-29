@@ -16,6 +16,25 @@
 }
 
 @media only screen and (max-width: 699px) {
+    #linkedin-and-resume-links {
+        margin: 0;
+        position: absolute;
+        top: 60vh;
+        margin-top: 50px;
+        width: 150px;
+        left: 50vw;
+        margin-left: -75px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #linkedin i.fa {
+        font-size: 2.5rem;
+        color: #0077b5;
+    }
+    #resume img {
+        height: 35px;
+        width: 35px;
+    }
     .navbar-custom {
         display: flex;
     }
@@ -39,6 +58,24 @@
 }
 
 @media only screen and (min-width: 700px) {
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+    #linkedin-and-resume-links {
+        margin: 0;
+    }
+    #linkedin,
+    #resume {
+        width: 100px;
+    }
+    #linkedin-and-resume-links i,
+    #linkedin-and-resume-links img {
+        margin-right: 0.5rem;
+    }
+    #linkedin i.fa {
+        color: #0077b5;
+    }
     .nav-link {
         display: flex;
         color: white;
