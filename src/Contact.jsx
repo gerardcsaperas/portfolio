@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './style/Contact.css';
 import { Form, Spinner } from 'react-bootstrap';
 import { Spring } from 'react-spring/renderprops';
-import Icons from './Icons';
 
 export default class Contact extends Component {
 	constructor(props) {
@@ -74,68 +73,54 @@ export default class Contact extends Component {
 				}
 			});
 		} else {
-			return alert('Hey, you should really double-check all fields are filled correctly. :-)');
+			return alert('Hey, you should double-check all fields are filled correctly. :-)');
 		}
 	};
 	render() {
-		if (this.props.page === 'Contact') {
-			return (
-				<Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
-					{(props) => (
-						<div style={props}>
-							<Form id="Contact" onSubmit={this.handleSubmit}>
-								<Form.Group controlId="name">
-									<Form.Label>Name</Form.Label>
-									<Form.Control
-										type="text"
-										placeholder="Your Name"
-										onChange={this.handleNameChange}
-									/>
-								</Form.Group>
-								<Form.Group controlId="email">
-									<Form.Label>Email address</Form.Label>
-									<Form.Control
-										type="email"
-										placeholder="name@example.com"
-										onChange={this.handleEmailChange}
-									/>
-									<Form.Text muted>I won't share it with anyone else.</Form.Text>
-								</Form.Group>
-								<Form.Group controlId="exampleForm.ControlTextarea1">
-									<Form.Label>Comments</Form.Label>
-									<Form.Control
-										as="textarea"
-										rows="3"
-										placeholder="Write as much as you need about yourself, your company, your project..."
-										onChange={this.handleCommentsChange}
-									/>
-								</Form.Group>
-								{!this.state.clickedSend ? (
-									<button id="contact-submit" type="submit" onClick={this.sendEmail}>
-										<b>SUBMIT</b>
-									</button>
-								) : !this.state.showSuccess && !this.state.showFailure ? (
-									<Spinner id="contact-spinner" animation="border" variant="warning" />
-								) : null}
-								{this.state.showSuccess ? (
-									<p id="success">
-										Your message has been sent. Please check your inbox for confirmation.
-									</p>
-								) : null}
-								{this.state.showFailure ? (
-									<p id="failure">
-										There has been an error. Please, try again or send me a message directly at
-										gcsaperas@gmail.com...
-									</p>
-								) : null}
-							</Form>
-							{this.props.windowHeight > 568 ? <Icons id="contact-icons" /> : null}
-						</div>
-					)}
-				</Spring>
-			);
-		} else {
-			return null;
-		}
+		return (
+			<Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
+				{(props) => (
+					<div style={props}>
+						<Form id="Contact" onSubmit={this.handleSubmit}>
+							<Form.Group controlId="name">
+								<Form.Label>Name</Form.Label>
+								<Form.Control type="text" placeholder="Your Name" onChange={this.handleNameChange} />
+							</Form.Group>
+							<Form.Group controlId="email">
+								<Form.Label>Email address</Form.Label>
+								<Form.Control
+									type="email"
+									placeholder="name@example.com"
+									onChange={this.handleEmailChange}
+								/>
+								<Form.Text muted>I won't share it with anyone else.</Form.Text>
+							</Form.Group>
+							<Form.Group controlId="exampleForm.ControlTextarea1">
+								<Form.Label>Comments</Form.Label>
+								<Form.Control
+									as="textarea"
+									rows="3"
+									placeholder="Write as much as you need about yourself, your company, your project..."
+									onChange={this.handleCommentsChange}
+								/>
+							</Form.Group>
+							{!this.state.clickedSend ? (
+								<button id="contact-submit" type="submit" onClick={this.sendEmail}>
+									<b>SUBMIT</b>
+								</button>
+							) : !this.state.showSuccess && !this.state.showFailure ? (
+								<Spinner id="contact-spinner" animation="border" variant="warning" />
+							) : null}
+							{this.state.showSuccess ? <p id="success">Thank you, message sent!</p> : null}
+							{this.state.showFailure ? (
+								<p id="failure">
+									There has been an error. Try sending your mail directly to gcsaperas@gmail.com
+								</p>
+							) : null}
+						</Form>
+					</div>
+				)}
+			</Spring>
+		);
 	}
 }

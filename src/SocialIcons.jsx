@@ -5,13 +5,13 @@ import './style/SocialIcons.css';
 export default function SocialIcons() {
 	return (
 		<div id="social-icons">
-			<a href="https://github.com/gerardcsaperas" target="_blank">
+			<a href="https://github.com/gerardcsaperas" target="_blank" rel="noopener noreferrer">
 				<FontAwesomeIcon icon={[ 'fab', 'github' ]} />
 			</a>
-			<a href="https://www.linkedin.com/in/gerardcastrelosaperas/" target="_blank">
+			<a href="https://www.linkedin.com/in/gerardcastrelosaperas/" target="_blank" rel="noopener noreferrer">
 				<FontAwesomeIcon icon={[ 'fab', 'linkedin' ]} />
 			</a>
-			<a href="https://www.freecodecamp.org/gerardcsaperas" target="_blank">
+			<a href="https://www.freecodecamp.org/gerardcsaperas" target="_blank" rel="noopener noreferrer">
 				<FontAwesomeIcon icon={[ 'fab', 'free-code-camp' ]} />
 			</a>
 		</div>

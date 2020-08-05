@@ -1,50 +1,50 @@
-        #background-image {
-            position: fixed;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            width: 100vw;
-        }
-        
-        #background-video {
-            display: none;
-            position: fixed;
-            left: 0;
-            top: 0;
-            margin: 0;
-            padding: 0;
-            min-height: 100%;
-            min-width: 100%;
-        }
-        
-        #background-video__dark-layer {
-            display: none;
-            position: fixed;
-            z-index: 0;
-            left: 0;
-            top: 0;
-            margin: 0;
-            padding: 0;
-            min-height: 100%;
-            min-width: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-        
-        @media only screen and (max-width: 699px) {
-            #background-image {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../assets/images/mobile-background.jpeg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-        }
-        
-        @media only screen and (min-width: 700px) {
-            #background-image {
-                display: none
-            }
-            #background-video,
-            #background-video__dark-layer {
-                display: initial
-            }
-        }
+#background-image {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#background-video {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+#background-video__dark-layer {
+    display: none;
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (max-width: 699px) {
+    #background-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../assets/images/mobile-background.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #background-image {
+        display: none;
+    }
+    #background-video,
+    #background-video__dark-layer {
+        display: initial;
+    }
+}
