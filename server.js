@@ -14,8 +14,8 @@ app.use(express.json());
 app.post('/send-email', async(req, res) => {
     const { name, email, comments } = req.body;
 
-    const myMailAccount = process.env.MY_MAIL || 'gcsaperas@gmail.com';
-    const password = process.env.MAIL_PASS || 'pqketymhxyyrghcb';
+    const myMailAccount = process.env.MY_MAIL;
+    const password = process.env.MAIL_PASS;
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
