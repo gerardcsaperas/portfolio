@@ -1,67 +1,33 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './style/App.css';
-import { Container } from 'react-bootstrap';
+
+// Fontawesome
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
+// Components
 import BackgroundImage from './BackgroundImage';
-import NavigationBar from './NavigationBar';
+import SocialIcons from './SocialIcons';
 import Home from './Home';
-import Portfolio from './Portfolio';
 import Contact from './Contact';
+import Icons from './Icons';
 
-class App extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			page: 'Home',
-			typingAnimation: 'on',
-			navbarVisible: false,
-			windowHeight: window.innerHeight
-		};
-	}
-	setNavbarVisible = () => {
-		this.setState({
-			navbarVisible: true
-		});
-	};
-	setTypingOff = () => {
-		// If the user already saw the animation once, deactivate it
-		this.setState({
-			typingAnimation: 'off'
-		});
-	};
-	toContact = () => {
-		this.setState({
-			page: 'Contact'
-		});
-	};
-	toHome = () => {
-		this.setState({
-			page: 'Home'
-		});
-	};
-	toPortfolio = () => {
-		this.setState({
-			page: 'Portfolio'
-		});
-	};
-	render() {
-		return (
-			<Container id="App" fluid>
+// Fontawesome (2)
+library.add(fab);
+
+export default function App() {
+	return (
+		<Router>
+			<Fragment>
 				<BackgroundImage />
-				{this.state.navbarVisible ? (
-					<NavigationBar toPortfolio={this.toPortfolio} toHome={this.toHome} toContact={this.toContact} />
-				) : null}
-				<Portfolio page={this.state.page} />
-				<Home
-					typingAnimation={this.state.typingAnimation}
-					setTypingOff={this.setTypingOff}
-					setNavbarVisible={this.setNavbarVisible}
-					page={this.state.page}
-					toContact={this.toContact}
-				/>
-				<Contact page={this.state.page} windowHeight={this.state.windowHeight} />
-			</Container>
-		);
-	}
+				<SocialIcons />
+				<Switch>
+					<Route exact path="/contact" component={Contact} />
+					<Route exact path="/" component={Home} />
+				</Switch>
+				<Icons />
+			</Fragment>
+		</Router>
+	);
 }
-
-export default App;

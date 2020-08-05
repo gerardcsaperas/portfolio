@@ -1,13 +1,6 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
 #Home {
-    height: 100vh;
     padding: 0;
     margin: 0;
-    overflow: hidden;
 }
 
 h1,
@@ -16,40 +9,121 @@ h3,
 p {
     color: whitesmoke;
     padding: 0;
-    margin: 0;
+    margin: 0 1rem 0 1rem;
 }
 
-@media only screen and (max-width: 699px) {
+@media only screen and (max-width: 768px) {
     h1,
     p {
         text-align: center;
     }
-    #text {
-        position: absolute;
-        top: 15vh;
+    div#text {
+        position: relative;
+        z-index: 1;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        margin-top: 5rem;
     }
     .display-1 {
-        font-size: 4rem;
+        font-size: 7rem;
         font-weight: 400;
     }
     .display-3 {
-        font-size: 3rem;
+        font-size: 5rem;
         font-weight: 100;
+    }
+    div#contact-button-container {
+        text-align: center;
+        margin-top: 3rem;
     }
     #hire {
         opacity: 1;
         outline: 0;
         color: #fff;
         line-height: 40px;
+        position: relative;
+        text-align: center;
+        letter-spacing: 1px;
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    #hire:hover:after {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+    #hire:hover:before {
+        opacity: 0;
+        transform: translateY(50%) rotateX(90deg);
+    }
+    #hire:after {
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        color: #4c4c53;
+        display: block;
+        transition: 0.8s;
         position: absolute;
-        top: 60vh;
-        left: 50vw;
-        width: 150px;
-        margin-left: -75px;
+        background: #ffe96d;
+        content: "Let's talk";
+        font-weight: bold;
+        transform: translateY(-50%) rotateX(90deg);
+    }
+    #hire:before {
+        top: 0;
+        left: 0;
+        opacity: 1;
+        color: #3b3b3b;
+        display: block;
+        padding: 0 30px;
+        line-height: 40px;
+        transition: 0.8s;
+        position: relative;
+        background: #ffdd1e;
+        content: "Hire me";
+        font-weight: bold;
+        transform: translateY(0) rotateX(0);
+    }
+    #linkedin i.fa {
+        font-size: 2rem;
+    }
+    #resume img {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    h1,
+    p {
+        text-align: center;
+    }
+    div#text {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .display-1 {
+        font-size: 3.5rem;
+        font-weight: 400;
+    }
+    .display-3 {
+        font-size: 2.5rem;
+        font-weight: 100;
+    }
+    div#contact-button-container {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    #hire {
+        opacity: 1;
+        outline: 0;
+        color: #fff;
+        line-height: 40px;
+        position: relative;
+        align-self: center;
         text-align: center;
         letter-spacing: 1px;
         display: inline-block;
@@ -78,7 +152,7 @@ p {
     }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 769px) {
     #text {
         position: absolute;
         top: 45vh;
