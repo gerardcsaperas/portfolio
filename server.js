@@ -39,15 +39,13 @@ app.post('/send-email', (req, res) => {
 
     transporter.sendMail(mailForMe, (error, info) => {
         if (error) {
-            console.log(error);
+            res.send(error);
         }
     });
 
     transporter.sendMail(mailForCustomer, (error, data) => {
         if (error) {
-            console.log(error);
-        } else {
-            res.send(data);
+            res.send(error);
         }
     });
 });
