@@ -12,13 +12,13 @@ div#social-icons svg {
     width: 5rem;
 }
 
-div#social-icons button {
+div#social-icons a {
     background: transparent;
     border: none;
     margin: 0 3rem 0 3rem;
 }
 
-div#social-icons button:focus {
+div#social-icons a:focus {
     border: none;
     outline: none;
 }
@@ -37,7 +37,7 @@ div#social-icons button:focus {
         width: 3rem;
         height: 3rem;
     }
-    div #social-icons button {
+    div #social-icons a {
         margin: 1rem;
     }
 }
@@ -50,7 +50,7 @@ div#social-icons button:focus {
         width: 3rem;
         height: 3rem;
     }
-    div #social-icons button {
+    div #social-icons a {
         margin: 1rem;
     }
 }

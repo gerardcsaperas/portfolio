@@ -5,15 +5,15 @@ import './style/SocialIcons.css';
 export default function SocialIcons() {
 	return (
 		<div id="social-icons">
-			<button>
+			<a href="https://github.com/gerardcsaperas" target="_blank">
 				<FontAwesomeIcon icon={[ 'fab', 'github' ]} />
-			</button>
-			<button>
+			</a>
+			<a href="https://www.linkedin.com/in/gerardcastrelosaperas/" target="_blank">
 				<FontAwesomeIcon icon={[ 'fab', 'linkedin' ]} />
-			</button>
-			<button>
-				<FontAwesomeIcon icon={[ 'fab', 'apple' ]} />
-			</button>
+			</a>
+			<a href="https://www.freecodecamp.org/gerardcsaperas" target="_blank">
+				<FontAwesomeIcon icon={[ 'fab', 'free-code-camp' ]} />
+			</a>
 		</div>
 	);
 }

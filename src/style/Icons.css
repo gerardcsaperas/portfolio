@@ -1,3 +1,27 @@
+#git {
+    color: #f05033;
+}
+
+#html5 {
+    color: #e44d26;
+}
+
+#css3 {
+    color: #25a6d7;
+}
+
+#javascript {
+    color: #f7df1e;
+}
+
+#react {
+    color: #41e0fd;
+}
+
+#nodejs {
+    color: #5fa04e;
+}
+
 .icon-col {
     display: flex;
     justify-content: center;
@@ -6,6 +30,8 @@
 .icon {
     max-width: 60px;
     max-height: 45px;
+    font-size: 3rem;
+    color: whitesmoke;
 }
 
 @media only screen and (max-width: 699px) {
@@ -19,7 +45,13 @@
     .icon {
         width: 30px;
         height: 30px;
-        margin: 0.25rem 0.25rem;
+        margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .icon {
+        margin: 0.4rem;
     }
 }
 
