@@ -67,7 +67,6 @@ export default class Contact extends Component {
 						showSuccess: true
 					});
 				} else {
-					console.log(res);
 					this.setState({
 						showFailure: true
 					});

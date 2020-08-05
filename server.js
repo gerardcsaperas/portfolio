@@ -11,41 +11,45 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use(express.json());
 
 // eMail test
-app.post('/send-email', (req, res) => {
+app.post('/send-email', async(req, res) => {
     const { name, email, comments } = req.body;
 
+    const myMailAccount = process.env.MY_MAIL || 'gcsaperas@gmail.com';
+    const password = process.env.MAIL_PASS || 'pqketymhxyyrghcb';
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.MY_MAIL,
-            pass: process.env.MAIL_PASS
+            user: myMailAccount,
+            pass: password
         },
         tls: { rejectUnauthorized: false }
     });
 
     const mailForMe = {
-        from: process.env.MY_MAIL,
-        to: process.env.MY_MAIL,
+        from: myMailAccount,
+        to: myMailAccount,
         subject: 'Web Dev - New Message',
         html: `<p>Hola a mi mateix,<br><br>Tinc un nou missatge.<br><br><b>De:</b> ${name}<br><br><b>email:</b> ${email}<br><br><b>Missatge:</b> ${comments}<br><br>Rebut a través de www.gerardcsaperas.com`
     };
 
     const mailForCustomer = {
-        from: process.env.MY_MAIL,
+        from: myMailAccount,
         to: `${email}`,
         subject: 'GerardCSaperas - Message Confirmation',
         html: `<p>Dear ${name},<br><br>Your message has been sent.<br><br><b>email:</b> ${email}<br><br><b>Message:</b> ${comments}<br><br>Thank you so much for your message, I'll get back to you as soon as possible.<br><br>Kind Regards,<br>Gerard</p>`
     };
 
-    transporter.sendMail(mailForMe, (error, info) => {
+    await transporter.sendMail(mailForMe, (error, info) => {
         if (error) {
             res.send(error);
         }
     });
 
-    transporter.sendMail(mailForCustomer, (error, data) => {
+    await transporter.sendMail(mailForCustomer, (error, data) => {
         if (error) {
             res.send(error);
+        } else {
+            res.send(data);
         }
     });
 });
