@@ -7,7 +7,7 @@ const app = express();
 // eMail
 const nodemailer = require('nodemailer');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'build')));
 app.use(express.json());
 
 // eMail test
@@ -53,8 +53,8 @@ app.post('/send-email', (req, res) => {
 });
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log('Express server is running on ' + PORT));
