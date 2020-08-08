@@ -11,7 +11,11 @@ export default function SocialIcons() {
 			<a href="https://www.linkedin.com/in/gerardcastrelosaperas/" target="_blank" rel="noopener noreferrer">
 				<FontAwesomeIcon icon={[ 'fab', 'linkedin' ]} />
 			</a>
-			<a href="https://www.freecodecamp.org/gerardcsaperas" target="_blank" rel="noopener noreferrer">
+			<a
+				href="https://drive.google.com/file/d/1RGVpPOHJCITqqswI88io_6dLSP27HTuz/view?usp=sharing"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				<FontAwesomeIcon icon={[ 'fab', 'free-code-camp' ]} />
 			</a>
 		</div>
