@@ -13,9 +13,9 @@ function BackgroundImage() {
 		if (now < 8) {
 			return '/Videos/sunrise.mp4';
 		} else if (now < 14) {
-			return '/Videos/day.mp4';
+			return '/Videos/morning.mp4';
 		} else if (now < 19) {
-			return '/Videos/cat.mp4';
+			return '/Videos/day.mp4';
 		} else if (now < 21) {
 			return '/Videos/sunset.mp4';
 		} else {
