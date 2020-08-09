@@ -37,7 +37,7 @@
 @media only screen and (max-width: 699px) {
     #icons {
         margin: 0;
-        position: fixed;
+        position: relative;
         bottom: 0;
         width: 100%;
         padding: 1rem 0;
@@ -45,13 +45,17 @@
     .icon {
         width: 30px;
         height: 30px;
-        margin: 1rem;
+        margin: 0;
+        padding: 0;
     }
-}
-
-@media only screen and (max-width: 320px) {
-    .icon {
-        margin: 0.4rem;
+    div.icon-col {
+        margin: 0;
+    }
+    div#icons {
+        margin-top: 2rem;
+    }
+    div#icons div#row1-icons {
+        margin-bottom: 1rem;
     }
 }
 

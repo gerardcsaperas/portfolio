@@ -32,6 +32,7 @@ div#social-icons a:focus {
 @media only screen and (max-width: 500px) {
     div#social-icons {
         padding-top: 5vh;
+        height: 15vh;
     }
     div#social-icons svg {
         width: 3rem;

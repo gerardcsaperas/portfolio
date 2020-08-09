@@ -99,6 +99,9 @@ p {
     p {
         text-align: center;
     }
+    div#Home {
+        height: 55vh;
+    }
     div#text {
         position: relative;
         z-index: 1;
