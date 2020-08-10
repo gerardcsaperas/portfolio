@@ -12,7 +12,7 @@ export default function SocialIcons() {
 				<FontAwesomeIcon icon={[ 'fab', 'linkedin' ]} />
 			</a>
 			<a
-				href="https://drive.google.com/file/d/1RGVpPOHJCITqqswI88io_6dLSP27HTuz/view?usp=sharing"
+				href="https://drive.google.com/file/d/1WQEAbJYY4j0QuAiawqw3JzMIqMankgrF/view?usp=sharing"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
