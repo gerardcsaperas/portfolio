@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaArrowAltCircleDown } from 'react-icons/fa';
 
 const Hero = () => {
     return (
-        <div className="h-screen relative">
+        <div className="h-screen relative bg-black">
             <div>
                 <Image src="/hero.jpg" layout="fill" objectFit="cover"></Image>
             </div>
@@ -19,6 +19,7 @@ const Hero = () => {
                     </p>
                     <div className="mt-7 flex justify-center space-x-5 text-3xl">
                         <a
+                            className="hover:text-red-900"
                             href="https://github.com/gerardcsaperas"
                             target="_blank"
                             rel="noopener"
@@ -26,6 +27,7 @@ const Hero = () => {
                             <FaGithub />
                         </a>
                         <a
+                            className="hover:text-red-900"
                             href="https://www.linkedin.com/in/gerardcastrelosaperas"
                             target="_blank"
                             rel="noopener"
@@ -34,6 +36,14 @@ const Hero = () => {
                         </a>
                     </div>
                 </div>
+            </div>
+            <div className="absolute bottom-5 w-full flex justify-center">
+                <a
+                    href="#about"
+                    className="text-white hover:text-red-900 text-3xl"
+                >
+                    <FaArrowAltCircleDown />
+                </a>
             </div>
         </div>
     );
