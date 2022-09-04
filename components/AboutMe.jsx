@@ -3,6 +3,13 @@ import Image from 'next/image';
 import { FaDownload } from 'react-icons/fa';
 
 const AboutMe = () => {
+    function downloadResume() {
+        const resumeURL = '/gerard-cs-resume.pdf';
+        if (typeof window !== 'undefined') {
+            window.location.href = resumeURL;
+        }
+    }
+
     return (
         <div
             id="about"
@@ -37,7 +44,10 @@ const AboutMe = () => {
                         </div>
                     </div>
                     <div>
-                        <button className="serious-button">
+                        <button
+                            className="serious-button"
+                            onClick={downloadResume}
+                        >
                             <div className="flex items-center md:space-x-2">
                                 <FaDownload />
                                 <p className="ml-2">Download Resume</p>
