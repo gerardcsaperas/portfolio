@@ -4,7 +4,6 @@ import Hero from '../components/Hero';
 import AboutMe from '../components/AboutMe';
 import Resume from '../components/Resume';
 import Projects from '../components/Projects';
-import Quote from '../components/Quote';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
                 <AboutMe />
                 <Resume />
                 <Projects />
-                <Quote />
             </main>
             <Footer />
         </div>
