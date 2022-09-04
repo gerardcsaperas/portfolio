@@ -2,11 +2,11 @@ import React from 'react';
 
 const Resume = () => {
     return (
-        <div className="bg-slate-50 px-10">
+        <div id="resume" className="bg-slate-50 px-10">
             {/* Education */}
             <div className="flex px-10 py-20 border-b">
                 <h2 className="w-[20%]">
-                    <span className="h-8 text-xl font-semibold pb-1 border-b-4 border-red-900">
+                    <span className="h-8 text-xl font-semibold pb-1 border-b-4 border-sky-400">
                         EDUCATION
                     </span>
                 </h2>
@@ -37,7 +37,7 @@ const Resume = () => {
             {/* Work */}
             <div className="flex px-10 py-20 border-b">
                 <h2 className="w-[20%]">
-                    <span className="h-8 text-xl font-semibold pb-1 border-b-4 border-red-900">
+                    <span className="h-8 text-xl font-semibold pb-1 border-b-4 border-sky-400">
                         WORK
                     </span>
                 </h2>
@@ -68,7 +68,7 @@ const Resume = () => {
             {/* Skills */}
             <div className="flex px-10 py-20">
                 <h2 className="w-[20%]">
-                    <span className="h-8 text-xl font-semibold pb-1 border-b-4 border-red-900">
+                    <span className="h-8 text-xl font-semibold pb-1 border-b-4 border-sky-400">
                         SKILLS
                     </span>
                 </h2>
