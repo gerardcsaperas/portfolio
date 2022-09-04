@@ -32,20 +32,7 @@ const AboutMe = () => {
                         </div>
                     </div>
                     <div>
-                        <button
-                            className="
-                                bg-gray-500
-                                font-semibold
-                                text-xs
-                                lg:text-base
-                                text-white
-                                p-3
-                                mt-12
-                                rounded-sm
-                                hover:text-gray-500
-                                hover:bg-white
-                            "
-                        >
+                        <button className="serious-button">
                             <div className="flex items-center space-x-2">
                                 <FaDownload />
                                 <p>Download Resume</p>
