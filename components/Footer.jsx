@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="h-52">
                 <Image src="/quote.jpg" layout="fill"></Image>
             </div>
-            <p className="absolute text-2xl tracking-widest leading-10 w-[50%] text-center">
+            <p className="absolute md:text-2xl tracking-widest leading-10 p-10 md:w-[50%] text-center">
                 Hard-working Full Stack Developer, fequently praised as being
                 focused by my peers, I can be relied upon to help you achieve
                 your goals.
