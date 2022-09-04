@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { FaGithub, FaLinkedin, FaArrowAltCircleDown } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
     return (
@@ -19,7 +20,7 @@ const Hero = () => {
                     </p>
                     <div className="mt-7 flex justify-center space-x-5 text-3xl">
                         <a
-                            className="hover:text-sky-400 transition-colors"
+                            className="coloured-link"
                             href="https://github.com/gerardcsaperas"
                             target="_blank"
                             rel="noopener"
@@ -27,7 +28,7 @@ const Hero = () => {
                             <FaGithub />
                         </a>
                         <a
-                            className="hover:text-sky-400 transition-colors"
+                            className="coloured-link"
                             href="https://www.linkedin.com/in/gerardcastrelosaperas"
                             target="_blank"
                             rel="noopener"
@@ -38,12 +39,14 @@ const Hero = () => {
                 </div>
             </div>
             <div className="absolute bottom-5 w-full flex justify-center">
-                <a
-                    href="#about"
-                    className="text-white hover:text-sky-400 transition-colors text-3xl"
+                <Link
+                    className="cursor-pointer text-white coloured-link text-3xl"
+                    to="about"
+                    smooth={true}
+                    duration={500}
                 >
                     <FaArrowAltCircleDown />
-                </a>
+                </Link>
             </div>
         </div>
     );
