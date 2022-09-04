@@ -4,15 +4,13 @@ const Resume = () => {
     return (
         <div id="resume" className="bg-slate-50 px-10">
             {/* Education */}
-            <div className="md:flex px-10 py-20 border-b">
-                <h2 className="md:w-[20%] text-center mb-20">
-                    <span className="h-8 text-xl font-semibold pb-1 border-b-4 border-sky-400">
-                        EDUCATION
-                    </span>
+            <div className="skill-block border-b">
+                <h2 className="skill-title">
+                    <span className="text-skill-title">EDUCATION</span>
                 </h2>
-                <div className="md:w-[80%] leading-9">
+                <div className="skill-facts">
                     <div className="mb-10">
-                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
+                        <h3 className="fact-title">
                             Universitat Pompeu Fabra (EUM)
                         </h3>
                         <p>
@@ -21,9 +19,7 @@ const Resume = () => {
                         <p>2011 - 2015</p>
                     </div>
                     <div>
-                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
-                            FREECODECAMP
-                        </h3>
+                        <h3 className="fact-title">FREECODECAMP</h3>
                         <p>
                             <em>
                                 Certificate in Full Stack Web Development,
@@ -35,26 +31,20 @@ const Resume = () => {
                 </div>
             </div>
             {/* Work */}
-            <div className="md:flex px-10 py-20 border-b">
-                <h2 className="md:w-[20%] text-center mb-20">
-                    <span className="h-8 text-xl font-semibold pb-1 border-b-4 border-sky-400">
-                        WORK
-                    </span>
+            <div className="skill-block border-b">
+                <h2 className="skill-title">
+                    <span className="text-skill-title">WORK</span>
                 </h2>
-                <div className="md:w-[80%] leading-9">
+                <div className="skill-facts">
                     <div>
                         <div className="mb-10">
-                            <h3 className="text-2xl md:text-3xl font-bold mb-5">
-                                Konodrac
-                            </h3>
+                            <h3 className="fact-title">Konodrac</h3>
                             <p>
                                 <em>Full Stack Developer</em>
                             </p>
                             <p>Sep 2020 - Current</p>
                         </div>
-                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
-                            Business Administration
-                        </h3>
+                        <h3 className="fact-title">Business Administration</h3>
                         <p>
                             <em>
                                 More than 5 years of business administration
@@ -66,24 +56,18 @@ const Resume = () => {
                 </div>
             </div>
             {/* Skills */}
-            <div className="md:flex px-10 py-20">
-                <h2 className="md:w-[20%] text-center mb-20">
-                    <span className="h-8 text-xl font-semibold pb-1 border-b-4 border-sky-400">
-                        SKILLS
-                    </span>
+            <div className="skill-block">
+                <h2 className="skill-title">
+                    <span className="text-skill-title">SKILLS</span>
                 </h2>
-                <div className="md:w-[80%] leading-9">
+                <div className="skill-facts">
                     <div className="mb-10">
-                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
-                            Version Control
-                        </h3>
+                        <h3 className="fact-title">Version Control</h3>
                         <p>Git</p>
                     </div>
                     <div className="mb-10">
-                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
-                            Front End
-                        </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2">
+                        <h3 className="fact-title">Front End</h3>
+                        <div className="dev-skills">
                             <p>HTML</p>
                             <p>CSS</p>
                             <p>JavaScript</p>
@@ -99,10 +83,8 @@ const Resume = () => {
                         </div>
                     </div>
                     <div className="mb-10">
-                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
-                            Back End
-                        </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2">
+                        <h3 className="fact-title">Back End</h3>
+                        <div className="dev-skills">
                             <p>Node.js</p>
                             <p>Express</p>
                             <p>MongoDB</p>
@@ -113,10 +95,8 @@ const Resume = () => {
                         </div>
                     </div>
                     <div className="mb-10">
-                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
-                            DevOps
-                        </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2">
+                        <h3 className="fact-title">DevOps</h3>
+                        <div className="dev-skills">
                             <p>Docker</p>
                             <p>Ansible</p>
                             <p>Heroku</p>
