@@ -14,7 +14,7 @@ const Resume = () => {
                             Universitat Pompeu Fabra (EUM)
                         </h3>
                         <p>
-                            <em>Bachelor's in Business Administration</em>
+                            <em>Bachelor&apos;s in Business Administration</em>
                         </p>
                         <p>2011 - 2015</p>
                     </div>

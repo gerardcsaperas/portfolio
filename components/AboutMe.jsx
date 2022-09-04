@@ -14,15 +14,16 @@ const AboutMe = () => {
                     src="/avatar.jpeg"
                     width="200"
                     height="200"
+                    alt=""
                 ></Image>
             </div>
             <div className="text-gray-400 leading-7 md:mx-10">
                 <h2 className="text-white font-bold my-5">About Me</h2>
-                <p>My name is Gerard, I'm a Full Stack Developer.</p>
+                <p>My name is Gerard, I&apos;m a Full Stack Developer.</p>
                 <br />
                 <p>
-                    Currently I'm working at Konodrac while also developing some
-                    freelance and personal projects.
+                    Currently I&apos;m working at Konodrac while also developing
+                    some freelance and personal projects.
                 </p>
                 <div className="md:flex space-x-20">
                     <div>

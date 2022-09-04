@@ -15,6 +15,7 @@ const ProjectSpotlight = () => {
                     width="500"
                     height="300"
                     objectFit="contain"
+                    alt=""
                 />
             </div>
             <div className="relative text-center my-7">
@@ -28,6 +29,7 @@ const ProjectSpotlight = () => {
                     width="500"
                     height="300"
                     objectFit="contain"
+                    alt=""
                 />
             </div>
             <div className="relative text-center my-7">
@@ -41,6 +43,7 @@ const ProjectSpotlight = () => {
                     width="500"
                     height="300"
                     objectFit="contain"
+                    alt=""
                 />
             </div>
         </div>
