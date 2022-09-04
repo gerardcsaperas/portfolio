@@ -11,7 +11,7 @@ const LinkToProject = ({ name, live, github }) => {
         >
             <p className="flex-grow text-xs md:text-sm">{name}</p>
             <a
-                className="hover:text-sky-400 transition-colors text-base"
+                className="coloured-link text-base"
                 href={github}
                 target="_blank"
                 rel="noopener"
@@ -19,7 +19,7 @@ const LinkToProject = ({ name, live, github }) => {
                 <FaGithub />
             </a>
             <a
-                className="hover:text-sky-400 transition-colors text-base"
+                className="coloured-link text-base"
                 href={live}
                 target="_blank"
                 rel="noopener"

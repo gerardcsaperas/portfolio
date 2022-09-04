@@ -22,6 +22,10 @@ body {
 @tailwind utilities;
 
 @layer components {
+    .coloured-link {
+        @apply hover:text-sky-400 transition-colors;
+    }
+
     .serious-button {
         @apply bg-gray-500
         font-semibold
