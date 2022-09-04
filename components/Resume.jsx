@@ -4,15 +4,15 @@ const Resume = () => {
     return (
         <div id="resume" className="bg-slate-50 px-10">
             {/* Education */}
-            <div className="flex px-10 py-20 border-b">
-                <h2 className="w-[20%]">
+            <div className="md:flex px-10 py-20 border-b">
+                <h2 className="md:w-[20%] text-center mb-20">
                     <span className="h-8 text-xl font-semibold pb-1 border-b-4 border-sky-400">
                         EDUCATION
                     </span>
                 </h2>
-                <div className="w-[80%] leading-9">
+                <div className="md:w-[80%] leading-9">
                     <div className="mb-10">
-                        <h3 className="text-3xl font-bold mb-5">
+                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
                             Universitat Pompeu Fabra (EUM)
                         </h3>
                         <p>
@@ -21,7 +21,7 @@ const Resume = () => {
                         <p>2011 - 2015</p>
                     </div>
                     <div>
-                        <h3 className="text-3xl font-bold mb-5">
+                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
                             FREECODECAMP
                         </h3>
                         <p>
@@ -35,16 +35,16 @@ const Resume = () => {
                 </div>
             </div>
             {/* Work */}
-            <div className="flex px-10 py-20 border-b">
-                <h2 className="w-[20%]">
+            <div className="md:flex px-10 py-20 border-b">
+                <h2 className="md:w-[20%] text-center mb-20">
                     <span className="h-8 text-xl font-semibold pb-1 border-b-4 border-sky-400">
                         WORK
                     </span>
                 </h2>
-                <div className="w-[80%] leading-9">
+                <div className="md:w-[80%] leading-9">
                     <div>
                         <div className="mb-10">
-                            <h3 className="text-3xl font-bold mb-5">
+                            <h3 className="text-2xl md:text-3xl font-bold mb-5">
                                 Konodrac
                             </h3>
                             <p>
@@ -52,7 +52,7 @@ const Resume = () => {
                             </p>
                             <p>Sep 2020 - Current</p>
                         </div>
-                        <h3 className="text-3xl font-bold mb-5">
+                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
                             Business Administration
                         </h3>
                         <p>
@@ -66,21 +66,23 @@ const Resume = () => {
                 </div>
             </div>
             {/* Skills */}
-            <div className="flex px-10 py-20">
-                <h2 className="w-[20%]">
+            <div className="md:flex px-10 py-20">
+                <h2 className="md:w-[20%] text-center mb-20">
                     <span className="h-8 text-xl font-semibold pb-1 border-b-4 border-sky-400">
                         SKILLS
                     </span>
                 </h2>
-                <div className="w-[80%] leading-9">
+                <div className="md:w-[80%] leading-9">
                     <div className="mb-10">
-                        <h3 className="text-3xl font-bold mb-5">
+                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
                             Version Control
                         </h3>
                         <p>Git</p>
                     </div>
                     <div className="mb-10">
-                        <h3 className="text-3xl font-bold mb-5">Front End</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
+                            Front End
+                        </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2">
                             <p>HTML</p>
                             <p>CSS</p>
@@ -97,7 +99,9 @@ const Resume = () => {
                         </div>
                     </div>
                     <div className="mb-10">
-                        <h3 className="text-3xl font-bold mb-5">Back End</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
+                            Back End
+                        </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2">
                             <p>Node.js</p>
                             <p>Express</p>
@@ -109,7 +113,9 @@ const Resume = () => {
                         </div>
                     </div>
                     <div className="mb-10">
-                        <h3 className="text-3xl font-bold mb-5">DevOps</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-5">
+                            DevOps
+                        </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2">
                             <p>Docker</p>
                             <p>Ansible</p>
